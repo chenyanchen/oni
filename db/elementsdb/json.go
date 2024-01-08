@@ -12,8 +12,8 @@ type jsonFileKV struct {
 	rw io.ReadWriter
 }
 
-func NewJsonKV(rw io.ReadWriter) *yamlFileKV {
-	return &yamlFileKV{rw: rw}
+func NewJsonKV(rw io.ReadWriter) *jsonFileKV {
+	return &jsonFileKV{rw: rw}
 }
 
 func (s *jsonFileKV) Get(ctx context.Context, k struct{}) ([]*model.Element, error) {
